@@ -1,0 +1,454 @@
+2024-06-23 10:28:01,078 ERROR o.s.b.d.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'logging.level.root' to org.springframework.boot.logging.LogLevel:
+
+    Property: logging.level.root
+    Value: "true"
+    Origin: class path resource [application.properties] - 11:22
+    Reason: failed to convert java.lang.String to org.springframework.boot.logging.LogLevel (caused by java.lang.IllegalArgumentException: No enum constant org.springframework.boot.logging.LogLevel.true)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    DEBUG
+    ERROR
+    FATAL
+    INFO
+    OFF
+    TRACE
+    WARN
+
+2024-06-23 10:29:31,210 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-23 10:29:31,264 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.1 with PID 17020 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-06-23 10:29:31,314 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-06-23 10:29:31,402 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-23 10:29:31,402 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-23 10:29:32,605 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23 10:29:32,675 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 60 ms. Found 7 JPA repository interfaces.
+2024-06-23 10:29:33,841 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-06-23 10:29:34,421 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-06-23 10:29:34,438 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-06-23 10:29:34,443 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-06-23 10:29:34,443 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-23 10:29:34,516 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-06-23 10:29:34,518 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3113 ms
+2024-06-23 10:29:34,795 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-06-23 10:29:35,604 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@36c9f335
+2024-06-23 10:29:35,606 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-06-23 10:29:35,658 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23 10:29:35,748 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-23 10:29:35,760 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-06-23 10:29:35,817 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-06-23 10:29:36,322 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23 10:29:37,890 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23 10:29:37,893 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 10:29:38,808 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-23 10:29:39,618 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution start
+2024-06-23 10:29:39,622 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method is : 1
+2024-06-23 10:29:39,623 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution end
+2024-06-23 10:29:39,718 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23 10:29:40,034 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [restartedMain] Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-06-23 10:29:40,128 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution start
+2024-06-23 10:29:40,468 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution start
+2024-06-23 10:29:40,471 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method is : 1
+2024-06-23 10:29:40,471 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution end
+2024-06-23 10:29:40,885 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@614bae1c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b767e95, org.springframework.security.web.context.SecurityContextHolderFilter@b3ac100, org.springframework.security.web.header.HeaderWriterFilter@5f486a10, org.springframework.web.filter.CorsFilter@6d31cf8e, org.springframework.security.web.csrf.CsrfFilter@3472aa9e, org.springframework.security.web.authentication.logout.LogoutFilter@417f581e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6c4e2bd3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@a695e0f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@371cc858, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2fef5e3a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2de86d01, org.springframework.security.web.access.ExceptionTranslationFilter@8bd938, org.springframework.security.web.access.intercept.AuthorizationFilter@9ff2db0]
+2024-06-23 10:29:40,886 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method is : 758
+2024-06-23 10:29:40,886 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution end
+2024-06-23 10:29:41,974 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-06-23 10:29:41,997 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2024-06-23 10:29:42,023 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path '/'
+2024-06-23 10:29:42,037 INFO o.s.b.StartupInfoLogger [restartedMain] Started EasySchoolApplication in 11.389 seconds (process running for 12.388)
+2024-06-23 10:29:46,950 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23 10:29:46,950 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-23 10:29:46,953 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 2 ms
+2024-06-23 10:29:47,034 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-06-23 10:29:47,036 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-06-23 10:29:47,036 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-06-23 10:29:48,277 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-06-23 10:29:48,277 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-06-23 10:29:48,277 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-06-23 10:29:57,722 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution start
+2024-06-23 10:29:57,723 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method is : 0
+2024-06-23 10:29:57,724 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution end
+2024-06-23 10:29:57,726 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution start
+2024-06-23 10:29:57,726 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-06-23 10:29:58,291 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 564
+2024-06-23 10:29:58,291 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-06-23 10:29:59,018 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method is : 1291
+2024-06-23 10:29:59,018 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution end
+2024-06-23 10:29:59,034 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-06-23 10:29:59,035 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-06-23 10:29:59,367 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 331
+2024-06-23 10:29:59,367 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-06-23 10:29:59,367 INFO c.e.d.c.DashboardController [http-nio-8082-exec-2] logging info message
+2024-06-23 10:29:59,367 WARN c.e.d.c.DashboardController [http-nio-8082-exec-2] logging warn message
+2024-06-23 10:29:59,367 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-2] logging error message
+2024-06-23 10:29:59,367 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 331
+2024-06-23 10:29:59,367 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-06-23 10:30:03,194 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution start
+2024-06-23 10:30:03,194 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution start
+2024-06-23 10:30:03,201 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution start
+2024-06-23 10:30:03,311 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method is : 109
+2024-06-23 10:30:03,311 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution end
+2024-06-23 10:30:03,312 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method is : 118
+2024-06-23 10:30:03,313 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution end
+2024-06-23 10:30:03,313 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method is : 118
+2024-06-23 10:30:03,313 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution end
+2024-06-23 10:30:06,763 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-06-23 10:30:06,765 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-06-23 10:30:07,427 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 662
+2024-06-23 10:30:07,427 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-06-23 10:30:07,427 INFO c.e.d.c.DashboardController [http-nio-8082-exec-3] logging info message
+2024-06-23 10:30:07,427 WARN c.e.d.c.DashboardController [http-nio-8082-exec-3] logging warn message
+2024-06-23 10:30:07,427 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-3] logging error message
+2024-06-23 10:30:07,427 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 662
+2024-06-23 10:30:07,427 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-06-23 10:30:10,207 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method execution start
+2024-06-23 10:30:10,213 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method execution start
+2024-06-23 10:30:10,471 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method is : 258
+2024-06-23 10:30:10,471 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method execution end
+2024-06-23 10:30:10,471 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method is : 264
+2024-06-23 10:30:10,471 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method execution end
+2024-06-23 10:30:12,637 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-06-23 10:30:12,637 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-06-23 10:30:12,703 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 65
+2024-06-23 10:30:12,703 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-06-23 10:30:12,703 INFO c.e.d.c.DashboardController [http-nio-8082-exec-9] logging info message
+2024-06-23 10:30:12,703 WARN c.e.d.c.DashboardController [http-nio-8082-exec-9] logging warn message
+2024-06-23 10:30:12,703 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-9] logging error message
+2024-06-23 10:30:12,703 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 65
+2024-06-23 10:30:12,703 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-06-23 10:53:34,389 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m58s376ms207µs400ns).
+2024-06-23 12:02:14,373 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m39s382ms160µs).
+2024-06-23 12:11:23,913 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 12:11:23,929 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-23 12:11:24,184 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-23 12:11:29,697 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-23 12:11:29,747 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.1 with PID 10044 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-06-23 12:11:29,748 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-06-23 12:11:29,826 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-23 12:11:29,826 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-23 12:11:30,893 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23 12:11:30,961 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 58 ms. Found 7 JPA repository interfaces.
+2024-06-23 12:11:32,222 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-06-23 12:11:32,888 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-06-23 12:11:32,906 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-06-23 12:11:32,910 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-06-23 12:11:32,910 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-23 12:11:32,997 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-06-23 12:11:32,999 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3170 ms
+2024-06-23 12:11:33,307 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-06-23 12:11:34,183 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e0f55a0
+2024-06-23 12:11:34,186 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-06-23 12:11:34,237 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23 12:11:34,326 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-23 12:11:34,337 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-06-23 12:11:34,410 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-06-23 12:11:34,852 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23 12:11:36,501 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23 12:11:36,507 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 12:11:38,166 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-23 12:11:39,277 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dashboardController': Unsatisfied dependency expressed through field 'defaultPageSize': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "10;"
+2024-06-23 12:11:39,291 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 12:11:39,297 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Shutdown initiated...
+2024-06-23 12:11:39,456 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Shutdown completed.
+2024-06-23 12:11:39,459 INFO o.a.j.l.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2024-06-23 12:11:39,476 INFO o.s.b.a.l.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-23 12:11:39,517 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dashboardController': Unsatisfied dependency expressed through field 'defaultPageSize': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "10;"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1421)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.eazybytes.demo.EasySchoolApplication.main(EasySchoolApplication.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.TypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "10;"
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:87)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:71)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784)
+	... 23 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "10;"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:588)
+	at java.base/java.lang.Integer.valueOf(Integer.java:935)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:203)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:439)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:412)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:161)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:80)
+	... 27 common frames omitted
+2024-06-23 12:13:33,307 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-23 12:13:33,355 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.1 with PID 17288 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-06-23 12:13:33,355 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-06-23 12:13:33,443 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-23 12:13:33,443 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-23 12:13:34,187 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23 12:13:34,259 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 57 ms. Found 7 JPA repository interfaces.
+2024-06-23 12:13:35,277 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-06-23 12:13:35,767 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-06-23 12:13:35,782 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-06-23 12:13:35,798 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-06-23 12:13:35,798 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-23 12:13:35,869 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-06-23 12:13:35,869 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2426 ms
+2024-06-23 12:13:36,160 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-06-23 12:13:36,918 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@228d09dd
+2024-06-23 12:13:36,919 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-06-23 12:13:36,979 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23 12:13:37,105 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-23 12:13:37,113 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-06-23 12:13:37,184 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-06-23 12:13:37,812 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23 12:13:39,789 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23 12:13:39,789 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 12:13:40,893 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-23 12:13:41,868 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution start
+2024-06-23 12:13:41,868 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method is : 0
+2024-06-23 12:13:41,868 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution end
+2024-06-23 12:13:41,979 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23 12:13:42,358 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [restartedMain] Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-06-23 12:13:42,484 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution start
+2024-06-23 12:13:42,974 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution start
+2024-06-23 12:13:42,981 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method is : 6
+2024-06-23 12:13:42,981 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution end
+2024-06-23 12:13:43,561 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@761d46c6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4bfb75b8, org.springframework.security.web.context.SecurityContextHolderFilter@6d3e7907, org.springframework.security.web.header.HeaderWriterFilter@12b0d303, org.springframework.web.filter.CorsFilter@21369a0a, org.springframework.security.web.csrf.CsrfFilter@39dac7ef, org.springframework.security.web.authentication.logout.LogoutFilter@3c491a38, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3a0d1ced, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@38f47b7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74403787, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4dfa8e17, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58fdd364, org.springframework.security.web.access.ExceptionTranslationFilter@5eb6bc76, org.springframework.security.web.access.intercept.AuthorizationFilter@6f4681b1]
+2024-06-23 12:13:43,561 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method is : 1077
+2024-06-23 12:13:43,561 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution end
+2024-06-23 12:13:44,604 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-06-23 12:13:44,635 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2024-06-23 12:13:44,666 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path '/'
+2024-06-23 12:13:44,683 INFO o.s.b.StartupInfoLogger [restartedMain] Started EasySchoolApplication in 11.817 seconds (process running for 12.723)
+2024-06-23 12:13:48,665 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23 12:13:48,672 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-23 12:13:48,673 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 0 ms
+2024-06-23 12:13:48,816 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-06-23 12:13:48,818 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 1
+2024-06-23 12:13:48,818 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-06-23 12:13:50,044 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-06-23 12:13:50,044 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-06-23 12:13:50,044 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-06-23 12:14:01,792 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution start
+2024-06-23 12:14:01,792 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method is : 0
+2024-06-23 12:14:01,792 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution end
+2024-06-23 12:14:01,792 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution start
+2024-06-23 12:14:01,798 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-06-23 12:14:02,176 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 378
+2024-06-23 12:14:02,177 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-06-23 12:14:02,745 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method is : 953
+2024-06-23 12:14:02,745 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution end
+2024-06-23 12:14:02,760 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-06-23 12:14:02,760 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-06-23 12:14:03,177 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 417
+2024-06-23 12:14:03,178 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-06-23 12:14:03,178 INFO c.e.d.c.DashboardController [http-nio-8082-exec-3] logging info message
+2024-06-23 12:14:03,179 WARN c.e.d.c.DashboardController [http-nio-8082-exec-3] logging warn message
+2024-06-23 12:14:03,179 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-3] logging error message
+2024-06-23 12:14:03,180 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-3] defaultPageSize value:10;
+2024-06-23 12:14:03,181 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-3] message:Your message is submitted successfully
+2024-06-23 12:14:03,181 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 420
+2024-06-23 12:14:03,182 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-06-23 12:40:18,863 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m11s605ms85µs400ns).
+2024-06-23 12:42:14,888 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 12:42:14,891 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-23 12:42:24,903 WARN c.z.h.p.HikariPool [SpringApplicationShutdownHook] Timed-out waiting for close connection executor to shutdown
+2024-06-23 12:42:24,903 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-23 12:45:59,431 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.eazybytes.demo.EasySchoolApplicationTests]: EasySchoolApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-23 12:45:59,552 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.eazybytes.demo.EasySchoolApplication for test class com.eazybytes.demo.EasySchoolApplicationTests
+2024-06-23 12:45:59,781 INFO o.s.b.d.r.RestartApplicationListener [main] Restart disabled due to context in which it is running
+2024-06-23 12:46:00,052 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-23 12:46:00,071 INFO o.s.b.StartupInfoLogger [main] Starting EasySchoolApplicationTests using Java 22.0.1 with PID 19912 (started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-06-23 12:46:00,073 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-23 12:46:00,860 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23 12:46:00,927 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 57 ms. Found 7 JPA repository interfaces.
+2024-06-23 12:46:02,178 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-23 12:46:03,448 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a2724d3
+2024-06-23 12:46:03,451 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-23 12:46:03,513 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23 12:46:03,603 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-23 12:46:03,612 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [main] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-06-23 12:46:03,660 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-23 12:46:04,036 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23 12:46:05,694 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23 12:46:05,699 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 12:46:06,542 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-23 12:46:07,324 INFO c.e.d.a.LoggerAspect [main] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution start
+2024-06-23 12:46:07,328 INFO c.e.d.a.LoggerAspect [main] Time took to execute PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method is : 0
+2024-06-23 12:46:07,328 INFO c.e.d.a.LoggerAspect [main] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution end
+2024-06-23 12:46:07,413 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23 12:46:07,864 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [main] Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-06-23 12:46:07,961 INFO c.e.d.a.LoggerAspect [main] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution start
+2024-06-23 12:46:08,342 INFO c.e.d.a.LoggerAspect [main] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution start
+2024-06-23 12:46:08,345 INFO c.e.d.a.LoggerAspect [main] Time took to execute void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method is : 1
+2024-06-23 12:46:08,346 INFO c.e.d.a.LoggerAspect [main] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution end
+2024-06-23 12:46:08,778 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@26b3eb48, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45db8ba6, org.springframework.security.web.context.SecurityContextHolderFilter@76b17a78, org.springframework.security.web.header.HeaderWriterFilter@5da5bd9e, org.springframework.web.filter.CorsFilter@6c826924, org.springframework.security.web.csrf.CsrfFilter@44bd11a2, org.springframework.security.web.authentication.logout.LogoutFilter@4da454a7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3bb29351, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@a69c4c3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28a210fb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7553ad52, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2809e7ab, org.springframework.security.web.access.ExceptionTranslationFilter@9eaaecf, org.springframework.security.web.access.intercept.AuthorizationFilter@74cf0dd9]
+2024-06-23 12:46:08,779 INFO c.e.d.a.LoggerAspect [main] Time took to execute SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method is : 817
+2024-06-23 12:46:08,780 INFO c.e.d.a.LoggerAspect [main] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution end
+2024-06-23 12:46:08,901 ERROR o.a.j.l.DirectJDKLog [main] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-06-23 12:46:09,916 INFO o.s.b.StartupInfoLogger [main] Started EasySchoolApplicationTests in 10.148 seconds (process running for 11.699)
+2024-06-23 12:46:10,865 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 12:46:10,868 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-23 12:46:11,216 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-23 12:48:41,211 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-23 12:48:41,269 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.1 with PID 22436 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-06-23 12:48:41,270 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-06-23 12:48:41,355 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-23 12:48:41,356 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-23 12:48:42,231 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23 12:48:42,289 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 49 ms. Found 7 JPA repository interfaces.
+2024-06-23 12:48:43,342 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-06-23 12:48:43,890 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-06-23 12:48:43,906 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-06-23 12:48:43,910 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-06-23 12:48:43,911 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-23 12:48:43,980 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-06-23 12:48:43,982 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2623 ms
+2024-06-23 12:48:44,308 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-06-23 12:48:45,175 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a9f5f06
+2024-06-23 12:48:45,177 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-06-23 12:48:45,235 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23 12:48:45,312 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-23 12:48:45,322 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-06-23 12:48:45,362 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-06-23 12:48:45,913 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23 12:48:47,481 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23 12:48:47,484 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 12:48:48,474 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-23 12:48:49,324 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution start
+2024-06-23 12:48:49,328 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method is : 2
+2024-06-23 12:48:49,328 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution end
+2024-06-23 12:48:49,423 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23 12:48:49,770 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [restartedMain] Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-06-23 12:48:49,852 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution start
+2024-06-23 12:48:50,187 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution start
+2024-06-23 12:48:50,190 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method is : 2
+2024-06-23 12:48:50,190 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution end
+2024-06-23 12:48:50,591 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78ff499e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3eb3b58a, org.springframework.security.web.context.SecurityContextHolderFilter@100cd739, org.springframework.security.web.header.HeaderWriterFilter@617a586a, org.springframework.web.filter.CorsFilter@b1821ba, org.springframework.security.web.csrf.CsrfFilter@5b39d1fd, org.springframework.security.web.authentication.logout.LogoutFilter@7a0219d3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@720a5b6e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@66663445, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73f6cef2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15af6c04, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c8bf880, org.springframework.security.web.access.ExceptionTranslationFilter@7bdb7a61, org.springframework.security.web.access.intercept.AuthorizationFilter@7ddbe5b2]
+2024-06-23 12:48:50,592 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method is : 739
+2024-06-23 12:48:50,592 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution end
+2024-06-23 12:48:51,688 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-06-23 12:48:51,711 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2024-06-23 12:48:51,733 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path '/'
+2024-06-23 12:48:51,747 INFO o.s.b.StartupInfoLogger [restartedMain] Started EasySchoolApplication in 11.031 seconds (process running for 12.505)
+2024-06-23 12:48:58,837 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-23 12:48:58,837 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-06-23 12:48:58,840 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 3 ms
+2024-06-23 12:48:58,939 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-06-23 12:48:58,940 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-06-23 12:48:58,940 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-06-23 12:48:59,594 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-06-23 12:48:59,596 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-06-23 12:48:59,597 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-06-23 12:49:04,981 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 12:49:04,985 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-23 12:49:05,153 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-23 12:49:29,229 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.eazybytes.demo.EasySchoolApplicationTests]: EasySchoolApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-06-23 12:49:29,571 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.eazybytes.demo.EasySchoolApplication for test class com.eazybytes.demo.EasySchoolApplicationTests
+2024-06-23 12:49:30,118 INFO o.s.b.d.r.RestartApplicationListener [main] Restart disabled due to context in which it is running
+2024-06-23 12:49:30,664 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-23 12:49:30,687 INFO o.s.b.StartupInfoLogger [main] Starting EasySchoolApplicationTests using Java 22.0.1 with PID 20952 (started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-06-23 12:49:30,688 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2024-06-23 12:49:31,682 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23 12:49:31,762 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 62 ms. Found 7 JPA repository interfaces.
+2024-06-23 12:49:33,434 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-23 12:49:34,563 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42cc5460
+2024-06-23 12:49:34,567 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-23 12:49:34,622 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23 12:49:34,694 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-23 12:49:34,703 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [main] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-06-23 12:49:34,749 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-23 12:49:35,135 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23 12:49:36,899 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23 12:49:36,903 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 12:49:37,995 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-23 12:49:39,038 INFO c.e.d.a.LoggerAspect [main] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution start
+2024-06-23 12:49:39,042 INFO c.e.d.a.LoggerAspect [main] Time took to execute PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method is : 1
+2024-06-23 12:49:39,043 INFO c.e.d.a.LoggerAspect [main] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution end
+2024-06-23 12:49:39,192 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23 12:49:39,549 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [main] Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-06-23 12:49:39,643 INFO c.e.d.a.LoggerAspect [main] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution start
+2024-06-23 12:49:40,096 INFO c.e.d.a.LoggerAspect [main] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution start
+2024-06-23 12:49:40,101 INFO c.e.d.a.LoggerAspect [main] Time took to execute void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method is : 3
+2024-06-23 12:49:40,102 INFO c.e.d.a.LoggerAspect [main] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution end
+2024-06-23 12:49:40,602 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4db65fac, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d7c76af, org.springframework.security.web.context.SecurityContextHolderFilter@2c4da654, org.springframework.security.web.header.HeaderWriterFilter@6705b98b, org.springframework.web.filter.CorsFilter@5cfadadc, org.springframework.security.web.csrf.CsrfFilter@77e0b681, org.springframework.security.web.authentication.logout.LogoutFilter@6cdfd50a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@608ccfcd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3015fc1b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73859ca8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b1378cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4310007c, org.springframework.security.web.access.ExceptionTranslationFilter@2ce987d7, org.springframework.security.web.access.intercept.AuthorizationFilter@42eb459d]
+2024-06-23 12:49:40,603 INFO c.e.d.a.LoggerAspect [main] Time took to execute SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method is : 959
+2024-06-23 12:49:40,603 INFO c.e.d.a.LoggerAspect [main] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution end
+2024-06-23 12:49:40,725 ERROR o.a.j.l.DirectJDKLog [main] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-06-23 12:49:42,149 INFO o.s.b.StartupInfoLogger [main] Started EasySchoolApplicationTests in 12.107 seconds (process running for 14.746)
+2024-06-23 12:49:43,142 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 12:49:43,146 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-23 12:49:43,339 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-23 16:40:18,668 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-23 16:40:18,724 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.1 with PID 22112 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-06-23 16:40:18,724 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-06-23 16:40:18,897 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-06-23 16:40:18,897 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-06-23 16:40:20,045 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23 16:40:20,107 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 55 ms. Found 7 JPA repository interfaces.
+2024-06-23 16:40:21,288 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-06-23 16:40:22,046 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-06-23 16:40:22,077 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-06-23 16:40:22,077 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-06-23 16:40:22,077 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-23 16:40:22,187 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-06-23 16:40:22,187 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3290 ms
+2024-06-23 16:40:22,499 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-06-23 16:40:23,400 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@464bb0e4
+2024-06-23 16:40:23,400 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-06-23 16:40:23,462 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23 16:40:23,541 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-23 16:40:23,556 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-06-23 16:40:23,603 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-06-23 16:40:24,073 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23 16:40:25,778 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23 16:40:25,778 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 16:40:26,629 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-23 16:40:27,579 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution start
+2024-06-23 16:40:27,579 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method is : 0
+2024-06-23 16:40:27,579 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution end
+2024-06-23 16:40:27,704 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-23 16:40:28,017 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [restartedMain] Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-06-23 16:40:28,080 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution start
+2024-06-23 16:40:28,408 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution start
+2024-06-23 16:40:28,424 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method is : 15
+2024-06-23 16:40:28,424 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution end
+2024-06-23 16:40:28,799 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@757254e3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@489abebc, org.springframework.security.web.context.SecurityContextHolderFilter@4a1606ec, org.springframework.security.web.header.HeaderWriterFilter@1ab764a6, org.springframework.web.filter.CorsFilter@28377f1c, org.springframework.security.web.csrf.CsrfFilter@482ffa13, org.springframework.security.web.authentication.logout.LogoutFilter@598c9c1c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@617a586a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2bc53ec2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e2e42f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@30f733e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a8667f6, org.springframework.security.web.access.ExceptionTranslationFilter@3fba974d, org.springframework.security.web.access.intercept.AuthorizationFilter@28cd516]
+2024-06-23 16:40:28,799 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method is : 719
+2024-06-23 16:40:28,799 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution end
+2024-06-23 16:40:29,693 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-06-23 16:40:29,709 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2024-06-23 16:40:29,724 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path '/'
+2024-06-23 16:40:29,740 INFO o.s.b.StartupInfoLogger [restartedMain] Started EasySchoolApplication in 11.581 seconds (process running for 12.893)
+2024-06-23 16:51:50,029 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23 16:51:50,032 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-23 16:51:50,422 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
