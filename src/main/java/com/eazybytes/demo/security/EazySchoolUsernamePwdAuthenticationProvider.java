@@ -40,7 +40,7 @@ public class EazySchoolUsernamePwdAuthenticationProvider
         }else{
             throw new BadCredentialsException("Invalid credentials!");
         }
-    }
+    }git
 
     private List<GrantedAuthority> getGrantedAuthorities(Roles roles) {
         List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
