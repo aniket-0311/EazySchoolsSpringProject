@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-alpine
 VOLUME /tmp
 
 # Copy the executable JAR file into the root directory
-COPY target/eazyschool-aws-deployment.jar /eazyschool-aws-deployment.jar
+COPY target/eazyschool-aws-deployment.jar /app.jar
 
 # Expose port 8082 to the outside world
 EXPOSE 8082
 
 # Run the JAR file
-ENTRYPOINT ["java", "-jar", "/eazyschool-aws-deployment.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
