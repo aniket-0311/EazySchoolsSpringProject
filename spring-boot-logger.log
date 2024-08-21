@@ -385,3 +385,347 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
 	... 108 common frames omitted
+2024-08-21 10:17:52,507 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-08-21 10:17:52,579 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.2 with PID 5096 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-08-21 10:17:52,580 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-08-21 10:17:52,679 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-21 10:17:52,680 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-21 10:17:53,602 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-21 10:17:53,680 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 66 ms. Found 7 JPA repository interfaces.
+2024-08-21 10:17:55,209 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-08-21 10:17:55,783 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-08-21 10:17:55,797 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-08-21 10:17:55,800 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-08-21 10:17:55,801 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-08-21 10:17:55,865 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-08-21 10:17:55,867 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3184 ms
+2024-08-21 10:17:56,122 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-08-21 10:17:59,101 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-21 10:17:59,181 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-21 10:17:59,188 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-08-21 10:17:59,225 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-08-21 10:17:59,634 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-21 10:17:59,668 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-08-21 10:18:02,530 WARN o.h.e.j.e.i.JdbcEnvironmentInitiator [restartedMain] HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:290)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.eazybytes.demo.EasySchoolApplication.main(EasySchoolApplication.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2024-08-21 10:18:02,537 ERROR o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-08-21 10:18:02,538 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-08-21 10:18:02,545 INFO o.a.j.l.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2024-08-21 10:18:02,562 INFO o.s.b.a.l.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-21 10:18:02,585 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.eazybytes.demo.EasySchoolApplication.main(EasySchoolApplication.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 18 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:152)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:362)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 33 common frames omitted
+2024-08-21 10:36:17,031 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-08-21 10:36:17,081 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.2 with PID 20284 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-08-21 10:36:17,137 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-08-21 10:36:17,366 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-21 10:36:17,366 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-21 10:36:18,502 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-21 10:36:18,570 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 58 ms. Found 7 JPA repository interfaces.
+2024-08-21 10:36:19,901 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-08-21 10:36:20,437 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-08-21 10:36:20,454 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-08-21 10:36:20,458 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-08-21 10:36:20,458 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-08-21 10:36:20,541 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-08-21 10:36:20,543 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3174 ms
+2024-08-21 10:36:20,864 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-08-21 10:36:22,840 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-21 10:36:22,939 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-21 10:36:22,946 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-08-21 10:36:23,002 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-08-21 10:36:23,435 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-21 10:36:23,476 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-08-21 10:36:24,591 WARN o.h.e.j.e.i.JdbcEnvironmentInitiator [restartedMain] HHH000342: Could not obtain connection to query metadata
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:290)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.eazybytes.demo.EasySchoolApplication.main(EasySchoolApplication.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+2024-08-21 10:36:24,594 ERROR o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-08-21 10:36:24,594 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2024-08-21 10:36:24,598 INFO o.a.j.l.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2024-08-21 10:36:24,614 INFO o.s.b.a.l.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-21 10:36:24,644 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.eazybytes.demo.EasySchoolApplication.main(EasySchoolApplication.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:221)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:189)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 18 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:191)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:152)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:362)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:123)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:77)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 33 common frames omitted
+2024-08-21 10:38:29,638 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-08-21 10:38:29,694 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.2 with PID 888 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-08-21 10:38:29,707 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-08-21 10:38:29,809 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-21 10:38:29,809 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-21 10:38:30,955 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-21 10:38:31,073 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 100 ms. Found 7 JPA repository interfaces.
+2024-08-21 10:38:32,206 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-08-21 10:38:32,754 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-08-21 10:38:32,771 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-08-21 10:38:32,775 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-08-21 10:38:32,775 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-08-21 10:38:32,848 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-08-21 10:38:32,848 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3039 ms
+2024-08-21 10:38:33,181 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-08-21 10:38:33,922 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65f4d8a
+2024-08-21 10:38:33,931 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-08-21 10:38:34,018 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-21 10:38:34,073 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-21 10:38:34,084 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-08-21 10:38:34,132 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-08-21 10:38:34,600 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-21 10:38:36,385 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-21 10:38:36,388 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-21 10:38:38,440 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-08-21 10:38:39,991 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution start
+2024-08-21 10:38:39,993 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method is : 0
+2024-08-21 10:38:39,993 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution end
+2024-08-21 10:38:40,176 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-21 10:38:40,859 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [restartedMain] Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-08-21 10:38:41,048 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution start
+2024-08-21 10:38:41,723 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution start
+2024-08-21 10:38:41,723 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method is : 0
+2024-08-21 10:38:41,723 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution end
+2024-08-21 10:38:42,631 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5c6f32e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79667947, org.springframework.security.web.context.SecurityContextHolderFilter@28672f8f, org.springframework.security.web.header.HeaderWriterFilter@6ada4c57, org.springframework.web.filter.CorsFilter@497dab2d, org.springframework.security.web.csrf.CsrfFilter@539eb673, org.springframework.security.web.authentication.logout.LogoutFilter@35702075, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4f99a21f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5a3ad217, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d511a14, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3723d5e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45db627f, org.springframework.security.web.access.ExceptionTranslationFilter@3872b44d, org.springframework.security.web.access.intercept.AuthorizationFilter@52d92bcb]
+2024-08-21 10:38:42,645 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method is : 1597
+2024-08-21 10:38:42,645 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution end
+2024-08-21 10:38:44,418 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-08-21 10:38:44,451 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2024-08-21 10:38:44,498 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path '/'
+2024-08-21 10:38:44,530 INFO o.s.b.StartupInfoLogger [restartedMain] Started EasySchoolApplication in 15.356 seconds (process running for 16.229)
+2024-08-21 10:39:06,814 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-21 10:39:06,814 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-08-21 10:39:06,819 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 5 ms
+2024-08-21 10:39:06,898 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.HomeController.displayHomePage() method execution start
+2024-08-21 10:39:06,898 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute String com.eazybytes.demo.controller.HomeController.displayHomePage() method is : 0
+2024-08-21 10:39:06,898 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.HomeController.displayHomePage() method execution end
+2024-08-21 10:39:08,435 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-08-21 10:39:08,437 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-08-21 10:39:08,437 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-08-21 10:39:14,063 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method execution start
+2024-08-21 10:39:14,071 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Iterable org.springframework.data.repository.CrudRepository.findAll() method execution start
+2024-08-21 10:39:14,517 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute Iterable org.springframework.data.repository.CrudRepository.findAll() method is : 444
+2024-08-21 10:39:14,521 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Iterable org.springframework.data.repository.CrudRepository.findAll() method execution end
+2024-08-21 10:39:14,526 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method is : 460
+2024-08-21 10:39:14,526 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method execution end
+2024-08-21 10:39:14,857 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-08-21 10:39:14,857 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-08-21 10:39:14,857 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-08-21 10:39:19,094 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-08-21 10:39:19,094 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-08-21 10:39:19,094 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-08-21 10:39:19,351 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-08-21 10:39:19,352 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-08-21 10:39:19,353 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-08-21 10:39:25,269 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution start
+2024-08-21 10:39:25,282 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method is : 12
+2024-08-21 10:39:25,282 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution end
+2024-08-21 10:39:25,283 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution start
+2024-08-21 10:39:25,284 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-08-21 10:39:25,633 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 349
+2024-08-21 10:39:25,633 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-08-21 10:39:25,916 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-08-21 10:39:25,916 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-08-21 10:39:25,916 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-08-21 10:39:26,117 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-08-21 10:39:26,117 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-08-21 10:39:26,117 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-08-21 10:39:31,017 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution start
+2024-08-21 10:39:31,017 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method is : 0
+2024-08-21 10:39:31,017 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution end
+2024-08-21 10:39:31,019 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution start
+2024-08-21 10:39:31,019 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-08-21 10:39:31,098 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 78
+2024-08-21 10:39:31,098 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-08-21 10:39:31,254 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method is : 235
+2024-08-21 10:39:31,256 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution end
+2024-08-21 10:39:31,264 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-08-21 10:39:31,269 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-08-21 10:39:31,322 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 52
+2024-08-21 10:39:31,322 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-08-21 10:39:31,322 INFO c.e.d.c.DashboardController [http-nio-8082-exec-5] logging info message
+2024-08-21 10:39:31,322 WARN c.e.d.c.DashboardController [http-nio-8082-exec-5] logging warn message
+2024-08-21 10:39:31,322 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-5] logging error message
+2024-08-21 10:39:31,322 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-5] defaultPageSize value:10;
+2024-08-21 10:39:31,329 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-5] message:Your message is submitted successfully
+2024-08-21 10:39:31,329 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 59
+2024-08-21 10:39:31,329 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-08-21 10:39:37,399 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution start
+2024-08-21 10:39:37,406 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution start
+2024-08-21 10:39:37,410 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution start
+2024-08-21 10:39:37,620 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Time took to execute Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method is : 207
+2024-08-21 10:39:37,620 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution end
+2024-08-21 10:39:37,620 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Time took to execute Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method is : 213
+2024-08-21 10:39:37,620 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution end
+2024-08-21 10:39:37,620 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Time took to execute ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method is : 214
+2024-08-21 10:39:37,628 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution end
+2024-08-21 10:39:52,752 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-21 10:39:52,757 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-08-21 10:39:52,993 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
