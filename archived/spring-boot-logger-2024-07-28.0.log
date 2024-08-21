@@ -1,0 +1,880 @@
+2024-07-28 15:20:59,449 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-07-28 15:20:59,662 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.2 with PID 10864 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-07-28 15:20:59,664 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-07-28 15:20:59,753 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-28 15:20:59,761 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-28 15:21:00,776 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-28 15:21:00,861 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 73 ms. Found 7 JPA repository interfaces.
+2024-07-28 15:21:02,220 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-07-28 15:21:02,846 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-07-28 15:21:02,860 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-07-28 15:21:02,864 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-07-28 15:21:02,865 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-28 15:21:02,965 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-07-28 15:21:02,967 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3203 ms
+2024-07-28 15:21:03,139 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'
+2024-07-28 15:21:03,142 INFO o.a.j.l.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2024-07-28 15:21:03,178 INFO o.s.b.a.l.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-28 15:21:03,216 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.eazybytes.demo.EasySchoolApplication.main(EasySchoolApplication.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1337)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1167)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: URL must start with 'jdbc'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 37 common frames omitted
+Caused by: java.lang.IllegalArgumentException: URL must start with 'jdbc'
+	at org.springframework.util.Assert.isTrue(Assert.java:111)
+	at org.springframework.boot.jdbc.DatabaseDriver.fromJdbcUrl(DatabaseDriver.java:284)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.determineDriverClassName(DataSourceProperties.java:180)
+	at org.springframework.boot.autoconfigure.jdbc.PropertiesJdbcConnectionDetails.getDriverClassName(PropertiesJdbcConnectionDetails.java:49)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration.createDataSource(DataSourceConfiguration.java:55)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari.dataSource(DataSourceConfiguration.java:117)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 38 common frames omitted
+2024-07-28 15:32:32,358 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-07-28 15:32:32,416 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.2 with PID 24924 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-07-28 15:32:32,500 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-07-28 15:32:32,751 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-28 15:32:32,752 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-28 15:32:34,042 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-28 15:32:34,194 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 132 ms. Found 7 JPA repository interfaces.
+2024-07-28 15:32:35,629 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-07-28 15:32:36,252 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-07-28 15:32:36,279 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-07-28 15:32:36,285 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-07-28 15:32:36,286 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-28 15:32:36,410 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-07-28 15:32:36,413 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3659 ms
+2024-07-28 15:32:36,892 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-07-28 15:32:37,743 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@651969e
+2024-07-28 15:32:37,746 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-07-28 15:32:37,809 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-28 15:32:37,968 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-28 15:32:38,028 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-07-28 15:32:38,184 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-07-28 15:32:38,749 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-28 15:32:40,255 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-28 15:32:40,260 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-28 15:32:43,745 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-28 15:32:44,555 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution start
+2024-07-28 15:32:44,559 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method is : 1
+2024-07-28 15:32:44,559 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution end
+2024-07-28 15:32:44,649 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-28 15:32:44,974 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [restartedMain] Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-07-28 15:32:45,079 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution start
+2024-07-28 15:32:45,508 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution start
+2024-07-28 15:32:45,511 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method is : 3
+2024-07-28 15:32:45,512 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution end
+2024-07-28 15:32:46,010 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5ee49e4c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7215d4a4, org.springframework.security.web.context.SecurityContextHolderFilter@302476d1, org.springframework.security.web.header.HeaderWriterFilter@6a6e8d60, org.springframework.web.filter.CorsFilter@3bcd44ce, org.springframework.security.web.csrf.CsrfFilter@68ee9371, org.springframework.security.web.authentication.logout.LogoutFilter@2dfb5b77, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2d5b6e1d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@e0384da, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4cb1094d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16033721, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@297a2239, org.springframework.security.web.access.ExceptionTranslationFilter@1a6b1dca, org.springframework.security.web.access.intercept.AuthorizationFilter@64c72b70]
+2024-07-28 15:32:46,010 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method is : 931
+2024-07-28 15:32:46,010 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution end
+2024-07-28 15:32:47,256 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-07-28 15:32:47,312 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2024-07-28 15:32:47,350 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path '/'
+2024-07-28 15:32:47,367 INFO o.s.b.StartupInfoLogger [restartedMain] Started EasySchoolApplication in 15.525 seconds (process running for 16.896)
+2024-07-28 15:33:05,299 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-28 15:33:05,299 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-3] Initializing Servlet 'dispatcherServlet'
+2024-07-28 15:33:05,303 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-3] Completed initialization in 4 ms
+2024-07-28 15:33:05,361 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.HomeController.displayHomePage() method execution start
+2024-07-28 15:33:05,361 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute String com.eazybytes.demo.controller.HomeController.displayHomePage() method is : 0
+2024-07-28 15:33:05,361 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.HomeController.displayHomePage() method execution end
+2024-07-28 15:33:06,527 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.GlobalExceptionController.exceptionHandler(Exception) method execution start
+2024-07-28 15:33:06,527 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute ModelAndView com.eazybytes.demo.controller.GlobalExceptionController.exceptionHandler(Exception) method is : 0
+2024-07-28 15:33:06,529 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.GlobalExceptionController.exceptionHandler(Exception) method execution end
+2024-07-28 15:33:06,534 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8082-exec-5] Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource assets/css/bootstrap.css.map.]
+2024-07-28 15:33:06,706 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] ModelAndView com.eazybytes.demo.controller.GlobalExceptionController.exceptionHandler(Exception) method execution start
+2024-07-28 15:33:06,706 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute ModelAndView com.eazybytes.demo.controller.GlobalExceptionController.exceptionHandler(Exception) method is : 0
+2024-07-28 15:33:06,706 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] ModelAndView com.eazybytes.demo.controller.GlobalExceptionController.exceptionHandler(Exception) method execution end
+2024-07-28 15:33:06,706 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8082-exec-6] Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource assets/js/bootstrap.min.js.map.]
+2024-07-28 15:33:07,151 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:33:07,151 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:33:07,152 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:33:13,934 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:33:13,939 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:33:13,939 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:33:14,458 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:33:14,464 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:33:14,464 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:33:21,764 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution start
+2024-07-28 15:33:21,769 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method is : 0
+2024-07-28 15:33:21,769 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution end
+2024-07-28 15:33:21,769 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution start
+2024-07-28 15:33:21,774 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:33:22,272 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 496
+2024-07-28 15:33:22,272 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:33:22,474 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method is : 705
+2024-07-28 15:33:22,474 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution end
+2024-07-28 15:33:22,492 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-07-28 15:33:22,493 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:33:22,502 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 9
+2024-07-28 15:33:22,502 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:33:22,502 INFO c.e.d.c.DashboardController [http-nio-8082-exec-6] logging info message
+2024-07-28 15:33:22,502 WARN c.e.d.c.DashboardController [http-nio-8082-exec-6] logging warn message
+2024-07-28 15:33:22,502 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-6] logging error message
+2024-07-28 15:33:22,506 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-6] defaultPageSize value:10;
+2024-07-28 15:33:22,506 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-6] message:Your message is submitted successfully
+2024-07-28 15:33:22,507 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 15
+2024-07-28 15:33:22,507 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-07-28 15:33:29,478 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution start
+2024-07-28 15:33:29,491 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] List org.springframework.data.repository.ListCrudRepository.findAll() method execution start
+2024-07-28 15:33:29,596 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute List org.springframework.data.repository.ListCrudRepository.findAll() method is : 101
+2024-07-28 15:33:29,598 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] List org.springframework.data.repository.ListCrudRepository.findAll() method execution end
+2024-07-28 15:33:29,600 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method is : 121
+2024-07-28 15:33:29,601 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution end
+2024-07-28 15:33:31,464 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-07-28 15:33:31,464 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:33:31,475 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 10
+2024-07-28 15:33:31,475 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:33:31,475 INFO c.e.d.c.DashboardController [http-nio-8082-exec-7] logging info message
+2024-07-28 15:33:31,475 WARN c.e.d.c.DashboardController [http-nio-8082-exec-7] logging warn message
+2024-07-28 15:33:31,475 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-7] logging error message
+2024-07-28 15:33:31,475 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-7] defaultPageSize value:10;
+2024-07-28 15:33:31,475 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-7] message:Your message is submitted successfully
+2024-07-28 15:33:31,475 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 10
+2024-07-28 15:33:31,475 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-07-28 15:33:34,886 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method execution start
+2024-07-28 15:33:34,888 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Iterable org.springframework.data.repository.CrudRepository.findAll() method execution start
+2024-07-28 15:33:34,932 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute Iterable org.springframework.data.repository.CrudRepository.findAll() method is : 38
+2024-07-28 15:33:34,932 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Iterable org.springframework.data.repository.CrudRepository.findAll() method execution end
+2024-07-28 15:33:34,932 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method is : 43
+2024-07-28 15:33:34,943 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method execution end
+2024-07-28 15:47:06,707 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-28 15:47:06,743 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-28 15:47:06,801 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-28 15:47:10,676 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-07-28 15:47:10,749 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.2 with PID 15136 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-07-28 15:47:10,751 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-07-28 15:47:10,853 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-28 15:47:10,853 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-28 15:47:11,915 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-28 15:47:11,984 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 61 ms. Found 7 JPA repository interfaces.
+2024-07-28 15:47:13,467 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-07-28 15:47:14,031 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-07-28 15:47:14,049 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-07-28 15:47:14,053 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-07-28 15:47:14,053 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-28 15:47:14,139 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-07-28 15:47:14,141 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3285 ms
+2024-07-28 15:47:14,500 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-07-28 15:47:17,966 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@165e5b5
+2024-07-28 15:47:17,971 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-07-28 15:47:18,032 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-28 15:47:18,134 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-28 15:47:18,147 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-07-28 15:47:18,213 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-07-28 15:47:18,824 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-28 15:47:21,324 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-28 15:47:21,329 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-28 15:47:22,293 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-28 15:47:22,996 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution start
+2024-07-28 15:47:23,003 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method is : 3
+2024-07-28 15:47:23,003 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution end
+2024-07-28 15:47:23,098 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-28 15:47:23,436 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [restartedMain] Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-07-28 15:47:23,502 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution start
+2024-07-28 15:47:23,831 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution start
+2024-07-28 15:47:23,836 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method is : 4
+2024-07-28 15:47:23,836 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution end
+2024-07-28 15:47:24,283 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d539e70, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73a220b7, org.springframework.security.web.context.SecurityContextHolderFilter@74e86acb, org.springframework.security.web.header.HeaderWriterFilter@34491822, org.springframework.web.filter.CorsFilter@29fd8fa1, org.springframework.security.web.csrf.CsrfFilter@7849a633, org.springframework.security.web.authentication.logout.LogoutFilter@714e7982, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1669eca7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@377a8a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a90cc96, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e7bb8ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@177138a9, org.springframework.security.web.access.ExceptionTranslationFilter@775394d9, org.springframework.security.web.access.intercept.AuthorizationFilter@276855f8]
+2024-07-28 15:47:24,283 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method is : 780
+2024-07-28 15:47:24,284 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution end
+2024-07-28 15:47:25,063 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-07-28 15:47:25,093 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2024-07-28 15:47:25,120 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path '/'
+2024-07-28 15:47:25,135 INFO o.s.b.StartupInfoLogger [restartedMain] Started EasySchoolApplication in 15.056 seconds (process running for 16.195)
+2024-07-28 15:47:33,638 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-28 15:47:33,638 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-07-28 15:47:33,643 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 5 ms
+2024-07-28 15:47:33,723 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method execution start
+2024-07-28 15:47:33,726 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Iterable org.springframework.data.repository.CrudRepository.findAll() method execution start
+2024-07-28 15:47:35,169 WARN o.h.e.j.s.SqlExceptionHelper [http-nio-8082-exec-1] SQL Error: 1146, SQLState: 42S02
+2024-07-28 15:47:35,171 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8082-exec-1] Table 'railway.holidays' doesn't exist
+2024-07-28 15:47:36,022 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] ModelAndView com.eazybytes.demo.controller.GlobalExceptionController.exceptionHandler(Exception) method execution start
+2024-07-28 15:47:36,024 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute ModelAndView com.eazybytes.demo.controller.GlobalExceptionController.exceptionHandler(Exception) method is : 1
+2024-07-28 15:47:36,024 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] ModelAndView com.eazybytes.demo.controller.GlobalExceptionController.exceptionHandler(Exception) method execution end
+2024-07-28 15:47:36,024 WARN o.s.w.s.h.AbstractHandlerExceptionResolver [http-nio-8082-exec-1] Resolved [org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select h1_0.day,h1_0.created_at,h1_0.created_by,h1_0.reason,h1_0.type,h1_0.updated_at,h1_0.updated_by from holidays h1_0] [Table 'railway.holidays' doesn't exist] [n/a]; SQL [n/a]]
+2024-07-28 15:48:06,631 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-28 15:48:06,636 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-28 15:48:08,015 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-28 15:48:11,126 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-07-28 15:48:11,178 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.2 with PID 22832 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-07-28 15:48:11,180 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-07-28 15:48:11,256 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-28 15:48:11,256 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-28 15:48:12,065 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-28 15:48:12,129 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 57 ms. Found 7 JPA repository interfaces.
+2024-07-28 15:48:13,362 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-07-28 15:48:13,940 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-07-28 15:48:13,962 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-07-28 15:48:13,968 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-07-28 15:48:13,968 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-28 15:48:14,044 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-07-28 15:48:14,046 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2788 ms
+2024-07-28 15:48:14,401 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-07-28 15:48:17,985 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ea3716c
+2024-07-28 15:48:17,990 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-07-28 15:48:18,056 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-28 15:48:18,147 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-28 15:48:18,157 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-07-28 15:48:18,215 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-07-28 15:48:18,708 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-28 15:48:21,245 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-28 15:48:21,250 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-28 15:48:22,104 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-28 15:48:22,862 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution start
+2024-07-28 15:48:22,865 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method is : 1
+2024-07-28 15:48:22,865 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution end
+2024-07-28 15:48:22,940 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-28 15:48:23,248 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [restartedMain] Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-07-28 15:48:23,346 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution start
+2024-07-28 15:48:23,818 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution start
+2024-07-28 15:48:23,820 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method is : 2
+2024-07-28 15:48:23,820 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution end
+2024-07-28 15:48:24,199 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5eb1d4fc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79726a36, org.springframework.security.web.context.SecurityContextHolderFilter@646b5155, org.springframework.security.web.header.HeaderWriterFilter@495aaccc, org.springframework.web.filter.CorsFilter@25c98266, org.springframework.security.web.csrf.CsrfFilter@1229319b, org.springframework.security.web.authentication.logout.LogoutFilter@241aaea, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4ae193be, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4475f383, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66074d27, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3aaca1e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e4b84b7, org.springframework.security.web.access.ExceptionTranslationFilter@1985b2ee, org.springframework.security.web.access.intercept.AuthorizationFilter@74caf92]
+2024-07-28 15:48:24,200 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method is : 852
+2024-07-28 15:48:24,200 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution end
+2024-07-28 15:48:25,071 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-07-28 15:48:25,099 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2024-07-28 15:48:25,134 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path '/'
+2024-07-28 15:48:25,160 INFO o.s.b.StartupInfoLogger [restartedMain] Started EasySchoolApplication in 14.649 seconds (process running for 15.559)
+2024-07-28 15:48:29,456 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-28 15:48:29,457 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-07-28 15:48:29,460 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 1 ms
+2024-07-28 15:48:29,552 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method execution start
+2024-07-28 15:48:29,556 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Iterable org.springframework.data.repository.CrudRepository.findAll() method execution start
+2024-07-28 15:48:31,920 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute Iterable org.springframework.data.repository.CrudRepository.findAll() method is : 2363
+2024-07-28 15:48:31,921 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Iterable org.springframework.data.repository.CrudRepository.findAll() method execution end
+2024-07-28 15:48:31,923 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method is : 2369
+2024-07-28 15:48:31,923 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method execution end
+2024-07-28 15:48:45,317 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-28 15:48:45,323 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-28 15:48:46,799 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-07-28 15:49:45,402 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-07-28 15:49:45,458 INFO o.s.b.StartupInfoLogger [restartedMain] Starting EasySchoolApplication using Java 22.0.2 with PID 16592 (D:\.vscode\Aniket\SpringBootStudy\demo\target\classes started by Aniket in D:\.vscode\Aniket\SpringBootStudy\demo)
+2024-07-28 15:49:45,460 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2024-07-28 15:49:45,543 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-28 15:49:45,544 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-28 15:49:46,400 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-28 15:49:46,483 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 73 ms. Found 7 JPA repository interfaces.
+2024-07-28 15:49:47,767 ERROR o.a.j.l.DirectJDKLog [restartedMain] An incompatible version [1.2.30] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-07-28 15:49:48,473 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port 8082 (http)
+2024-07-28 15:49:48,494 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8082"]
+2024-07-28 15:49:48,500 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-07-28 15:49:48,501 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-07-28 15:49:48,608 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-07-28 15:49:48,611 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 3065 ms
+2024-07-28 15:49:49,019 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-07-28 15:49:52,536 INFO c.z.h.p.HikariPool [restartedMain] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4355587d
+2024-07-28 15:49:52,545 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-07-28 15:49:52,639 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-28 15:49:52,737 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-28 15:49:52,748 WARN o.h.j.b.i.EntityManagerFactoryBuilderImpl [restartedMain] HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2024-07-28 15:49:52,827 INFO o.h.c.i.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2024-07-28 15:49:53,250 INFO o.s.o.j.p.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-28 15:49:55,752 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-28 15:49:55,755 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-28 15:49:56,598 INFO o.s.d.j.r.q.QueryEnhancerFactory [restartedMain] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-07-28 15:49:57,244 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution start
+2024-07-28 15:49:57,254 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method is : 6
+2024-07-28 15:49:57,254 INFO c.e.d.a.LoggerAspect [restartedMain] PasswordEncoder com.eazybytes.demo.config.ProjectSecurityConfig.passwordEncoder() method execution end
+2024-07-28 15:49:57,355 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-28 15:49:57,623 INFO o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer [restartedMain] Global AuthenticationManager configured with AuthenticationProvider bean with name eazySchoolUsernamePwdAuthenticationProvider
+2024-07-28 15:49:57,712 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution start
+2024-07-28 15:49:58,017 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution start
+2024-07-28 15:49:58,019 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method is : 1
+2024-07-28 15:49:58,020 INFO c.e.d.a.LoggerAspect [restartedMain] void com.eazybytes.demo.config.WebConfig.addViewControllers(ViewControllerRegistry) method execution end
+2024-07-28 15:49:58,355 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@784bbdd8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66074d27, org.springframework.security.web.context.SecurityContextHolderFilter@12367117, org.springframework.security.web.header.HeaderWriterFilter@168dd33d, org.springframework.web.filter.CorsFilter@4f3a9d5, org.springframework.security.web.csrf.CsrfFilter@aa31a30, org.springframework.security.web.authentication.logout.LogoutFilter@1229319b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@436bd6d1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@646b5155, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47a74d9d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28672f8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3aaca1e7, org.springframework.security.web.access.ExceptionTranslationFilter@6350c85, org.springframework.security.web.access.intercept.AuthorizationFilter@317f5d08]
+2024-07-28 15:49:58,355 INFO c.e.d.a.LoggerAspect [restartedMain] Time took to execute SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method is : 643
+2024-07-28 15:49:58,356 INFO c.e.d.a.LoggerAspect [restartedMain] SecurityFilterChain com.eazybytes.demo.config.ProjectSecurityConfig.defaultSecurityFilterChain(HttpSecurity) method execution end
+2024-07-28 15:49:59,172 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-07-28 15:49:59,195 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8082"]
+2024-07-28 15:49:59,221 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port 8082 (http) with context path '/'
+2024-07-28 15:49:59,234 INFO o.s.b.StartupInfoLogger [restartedMain] Started EasySchoolApplication in 14.28 seconds (process running for 15.151)
+2024-07-28 15:50:06,415 INFO o.a.j.l.DirectJDKLog [http-nio-8082-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-28 15:50:06,416 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Initializing Servlet 'dispatcherServlet'
+2024-07-28 15:50:06,420 INFO o.s.w.s.FrameworkServlet [http-nio-8082-exec-1] Completed initialization in 4 ms
+2024-07-28 15:50:06,522 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method execution start
+2024-07-28 15:50:06,525 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Iterable org.springframework.data.repository.CrudRepository.findAll() method execution start
+2024-07-28 15:50:09,102 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute Iterable org.springframework.data.repository.CrudRepository.findAll() method is : 2575
+2024-07-28 15:50:09,102 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Iterable org.springframework.data.repository.CrudRepository.findAll() method execution end
+2024-07-28 15:50:09,103 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method is : 2581
+2024-07-28 15:50:09,104 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.HolidaysController.displayHolidays(String,Model) method execution end
+2024-07-28 15:50:12,276 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method execution start
+2024-07-28 15:50:12,287 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method is : 11
+2024-07-28 15:50:12,287 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method execution end
+2024-07-28 15:50:12,372 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:50:12,373 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:50:12,374 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:50:12,623 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:50:12,625 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:50:12,625 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:50:16,505 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:50:16,505 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:50:16,505 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:50:16,642 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:50:16,642 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:50:16,643 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:50:23,049 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution start
+2024-07-28 15:50:23,049 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Time took to execute boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method is : 0
+2024-07-28 15:50:23,049 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution end
+2024-07-28 15:50:23,049 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution start
+2024-07-28 15:50:23,049 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:50:24,488 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1439
+2024-07-28 15:50:24,488 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:50:24,696 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Time took to execute Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method is : 1647
+2024-07-28 15:50:24,696 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution end
+2024-07-28 15:50:24,711 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-07-28 15:50:24,711 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:50:25,695 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 983
+2024-07-28 15:50:25,695 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:50:25,695 INFO c.e.d.c.DashboardController [http-nio-8082-exec-5] logging info message
+2024-07-28 15:50:25,695 WARN c.e.d.c.DashboardController [http-nio-8082-exec-5] logging warn message
+2024-07-28 15:50:25,695 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-5] logging error message
+2024-07-28 15:50:25,695 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-5] defaultPageSize value:10;
+2024-07-28 15:50:25,695 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-5] message:Your message is submitted successfully
+2024-07-28 15:50:25,701 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 990
+2024-07-28 15:50:25,701 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-07-28 15:50:29,950 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution start
+2024-07-28 15:50:29,950 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] List org.springframework.data.repository.ListCrudRepository.findAll() method execution start
+2024-07-28 15:50:32,256 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute List org.springframework.data.repository.ListCrudRepository.findAll() method is : 2301
+2024-07-28 15:50:32,258 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] List org.springframework.data.repository.ListCrudRepository.findAll() method execution end
+2024-07-28 15:50:32,258 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method is : 2307
+2024-07-28 15:50:32,258 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution end
+2024-07-28 15:51:02,910 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] ModelAndView com.eazybytes.demo.controller.AdminController.addNewClass(Model,EazyClass) method execution start
+2024-07-28 15:51:02,910 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:51:03,612 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution start
+2024-07-28 15:51:03,612 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method is : 0
+2024-07-28 15:51:03,612 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution end
+2024-07-28 15:51:04,651 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 1735
+2024-07-28 15:51:04,652 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:51:04,653 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.addNewClass(Model,EazyClass) method is : 1742
+2024-07-28 15:51:04,654 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] ModelAndView com.eazybytes.demo.controller.AdminController.addNewClass(Model,EazyClass) method execution end
+2024-07-28 15:51:04,663 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution start
+2024-07-28 15:51:04,664 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] List org.springframework.data.repository.ListCrudRepository.findAll() method execution start
+2024-07-28 15:51:06,583 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute List org.springframework.data.repository.ListCrudRepository.findAll() method is : 1918
+2024-07-28 15:51:06,586 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] List org.springframework.data.repository.ListCrudRepository.findAll() method execution end
+2024-07-28 15:51:06,588 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method is : 1923
+2024-07-28 15:51:06,588 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution end
+2024-07-28 15:51:09,974 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method execution start
+2024-07-28 15:51:09,978 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution start
+2024-07-28 15:51:11,934 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute Optional org.springframework.data.repository.CrudRepository.findById(Object) method is : 1955
+2024-07-28 15:51:11,936 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution end
+2024-07-28 15:51:11,937 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method is : 1962
+2024-07-28 15:51:11,937 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method execution end
+2024-07-28 15:51:18,846 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution start
+2024-07-28 15:51:18,848 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] List org.springframework.data.repository.ListCrudRepository.findAll() method execution start
+2024-07-28 15:51:20,831 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute List org.springframework.data.repository.ListCrudRepository.findAll() method is : 1982
+2024-07-28 15:51:20,834 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] List org.springframework.data.repository.ListCrudRepository.findAll() method execution end
+2024-07-28 15:51:20,836 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method is : 1987
+2024-07-28 15:51:20,837 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution end
+2024-07-28 15:51:33,772 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] ModelAndView com.eazybytes.demo.controller.AdminController.addNewClass(Model,EazyClass) method execution start
+2024-07-28 15:51:33,776 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:51:34,487 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution start
+2024-07-28 15:51:34,487 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method is : 0
+2024-07-28 15:51:34,487 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution end
+2024-07-28 15:51:35,460 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 1681
+2024-07-28 15:51:35,460 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:51:35,460 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.addNewClass(Model,EazyClass) method is : 1683
+2024-07-28 15:51:35,460 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] ModelAndView com.eazybytes.demo.controller.AdminController.addNewClass(Model,EazyClass) method execution end
+2024-07-28 15:51:35,476 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution start
+2024-07-28 15:51:35,476 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] List org.springframework.data.repository.ListCrudRepository.findAll() method execution start
+2024-07-28 15:51:37,174 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute List org.springframework.data.repository.ListCrudRepository.findAll() method is : 1698
+2024-07-28 15:51:37,174 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] List org.springframework.data.repository.ListCrudRepository.findAll() method execution end
+2024-07-28 15:51:37,174 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method is : 1698
+2024-07-28 15:51:37,174 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution end
+2024-07-28 15:51:39,410 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method execution start
+2024-07-28 15:51:39,410 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method is : 0
+2024-07-28 15:51:39,410 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method execution end
+2024-07-28 15:51:39,426 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:51:39,426 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:51:39,426 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:51:39,573 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:51:39,573 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:51:39,573 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:51:42,221 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.PublicController.displayRegisterPage(Model) method execution start
+2024-07-28 15:51:42,221 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute String com.eazybytes.demo.controller.PublicController.displayRegisterPage(Model) method is : 0
+2024-07-28 15:51:42,221 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.PublicController.displayRegisterPage(Model) method execution end
+2024-07-28 15:51:42,511 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:51:42,511 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:51:42,511 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:52:16,981 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] void com.eazybytes.demo.validations.FieldsValueMatchValidator.initialize(FieldsValueMatch) method execution start
+2024-07-28 15:52:16,981 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute void com.eazybytes.demo.validations.FieldsValueMatchValidator.initialize(FieldsValueMatch) method is : 0
+2024-07-28 15:52:16,981 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] void com.eazybytes.demo.validations.FieldsValueMatchValidator.initialize(FieldsValueMatch) method execution end
+2024-07-28 15:52:16,986 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution start
+2024-07-28 15:52:16,986 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method is : 0
+2024-07-28 15:52:16,986 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution end
+2024-07-28 15:52:17,024 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] void com.eazybytes.demo.validations.FieldsValueMatchValidator.initialize(FieldsValueMatch) method execution start
+2024-07-28 15:52:17,025 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute void com.eazybytes.demo.validations.FieldsValueMatchValidator.initialize(FieldsValueMatch) method is : 0
+2024-07-28 15:52:17,026 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] void com.eazybytes.demo.validations.FieldsValueMatchValidator.initialize(FieldsValueMatch) method execution end
+2024-07-28 15:52:17,028 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution start
+2024-07-28 15:52:17,030 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method is : 0
+2024-07-28 15:52:17,030 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution end
+2024-07-28 15:52:17,060 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] void com.eazybytes.demo.validations.PasswordStrengthValidator.initialize(PasswordValidator) method execution start
+2024-07-28 15:52:17,067 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute void com.eazybytes.demo.validations.PasswordStrengthValidator.initialize(PasswordValidator) method is : 0
+2024-07-28 15:52:17,067 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] void com.eazybytes.demo.validations.PasswordStrengthValidator.initialize(PasswordValidator) method execution end
+2024-07-28 15:52:17,067 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.PasswordStrengthValidator.isValid(String,ConstraintValidatorContext) method execution start
+2024-07-28 15:52:17,067 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute boolean com.eazybytes.demo.validations.PasswordStrengthValidator.isValid(String,ConstraintValidatorContext) method is : 0
+2024-07-28 15:52:17,067 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.PasswordStrengthValidator.isValid(String,ConstraintValidatorContext) method execution end
+2024-07-28 15:52:17,084 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.PublicController.createUser(Person,Errors) method execution start
+2024-07-28 15:52:17,084 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute String com.eazybytes.demo.controller.PublicController.createUser(Person,Errors) method is : 0
+2024-07-28 15:52:17,084 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.PublicController.createUser(Person,Errors) method execution end
+2024-07-28 15:52:17,281 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:52:17,281 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:52:17,281 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:52:29,832 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution start
+2024-07-28 15:52:29,833 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method is : 0
+2024-07-28 15:52:29,834 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution end
+2024-07-28 15:52:29,836 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution start
+2024-07-28 15:52:29,836 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method is : 0
+2024-07-28 15:52:29,837 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution end
+2024-07-28 15:52:29,837 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] boolean com.eazybytes.demo.validations.PasswordStrengthValidator.isValid(String,ConstraintValidatorContext) method execution start
+2024-07-28 15:52:29,837 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute boolean com.eazybytes.demo.validations.PasswordStrengthValidator.isValid(String,ConstraintValidatorContext) method is : 0
+2024-07-28 15:52:29,839 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] boolean com.eazybytes.demo.validations.PasswordStrengthValidator.isValid(String,ConstraintValidatorContext) method execution end
+2024-07-28 15:52:29,840 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.PublicController.createUser(Person,Errors) method execution start
+2024-07-28 15:52:29,840 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] boolean com.eazybytes.demo.service.PersonService.createNewPerson(Person) method execution start
+2024-07-28 15:52:29,840 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Roles com.eazybytes.demo.repository.RolesRepository.getByRoleName(String) method execution start
+2024-07-28 15:52:30,454 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Roles com.eazybytes.demo.repository.RolesRepository.getByRoleName(String) method is : 613
+2024-07-28 15:52:30,454 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Roles com.eazybytes.demo.repository.RolesRepository.getByRoleName(String) method execution end
+2024-07-28 15:52:30,624 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:52:30,900 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution start
+2024-07-28 15:52:30,900 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method is : 0
+2024-07-28 15:52:30,900 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution end
+2024-07-28 15:52:31,819 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 1194
+2024-07-28 15:52:31,828 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:52:31,829 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute boolean com.eazybytes.demo.service.PersonService.createNewPerson(Person) method is : 1988
+2024-07-28 15:52:31,829 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] boolean com.eazybytes.demo.service.PersonService.createNewPerson(Person) method execution end
+2024-07-28 15:52:31,829 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute String com.eazybytes.demo.controller.PublicController.createUser(Person,Errors) method is : 1989
+2024-07-28 15:52:31,829 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.PublicController.createUser(Person,Errors) method execution end
+2024-07-28 15:52:31,848 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:52:31,851 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:52:31,851 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:52:31,985 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:52:31,992 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:52:31,994 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:52:41,325 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution start
+2024-07-28 15:52:41,325 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method is : 0
+2024-07-28 15:52:41,325 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution end
+2024-07-28 15:52:41,330 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution start
+2024-07-28 15:52:41,330 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:52:43,219 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1888
+2024-07-28 15:52:43,219 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:52:43,382 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method is : 2052
+2024-07-28 15:52:43,382 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution end
+2024-07-28 15:52:43,389 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-07-28 15:52:43,389 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:52:44,296 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 905
+2024-07-28 15:52:44,297 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:52:44,298 INFO c.e.d.c.DashboardController [http-nio-8082-exec-5] logging info message
+2024-07-28 15:52:44,298 WARN c.e.d.c.DashboardController [http-nio-8082-exec-5] logging warn message
+2024-07-28 15:52:44,299 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-5] logging error message
+2024-07-28 15:52:44,299 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-5] defaultPageSize value:10;
+2024-07-28 15:52:44,301 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-5] message:Your message is submitted successfully
+2024-07-28 15:52:44,301 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 911
+2024-07-28 15:52:44,301 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-07-28 15:52:48,427 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] ModelAndView com.eazybytes.demo.controller.StudentController.displayCourses(Model,HttpSession) method execution start
+2024-07-28 15:52:48,431 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Time took to execute ModelAndView com.eazybytes.demo.controller.StudentController.displayCourses(Model,HttpSession) method is : 0
+2024-07-28 15:52:48,431 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] ModelAndView com.eazybytes.demo.controller.StudentController.displayCourses(Model,HttpSession) method execution end
+2024-07-28 15:52:50,550 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-07-28 15:52:50,564 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:52:51,801 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1233
+2024-07-28 15:52:51,802 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:52:51,803 INFO c.e.d.c.DashboardController [http-nio-8082-exec-9] logging info message
+2024-07-28 15:52:51,803 WARN c.e.d.c.DashboardController [http-nio-8082-exec-9] logging warn message
+2024-07-28 15:52:51,803 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-9] logging error message
+2024-07-28 15:52:51,803 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-9] defaultPageSize value:10;
+2024-07-28 15:52:51,803 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-9] message:Your message is submitted successfully
+2024-07-28 15:52:51,805 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 1252
+2024-07-28 15:52:51,806 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-07-28 15:52:52,863 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method execution start
+2024-07-28 15:52:52,871 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method is : 0
+2024-07-28 15:52:52,871 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method execution end
+2024-07-28 15:52:52,878 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:52:52,878 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:52:52,894 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:52:53,071 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:52:53,072 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:52:53,072 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:52:57,383 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.PublicController.displayRegisterPage(Model) method execution start
+2024-07-28 15:52:57,384 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute String com.eazybytes.demo.controller.PublicController.displayRegisterPage(Model) method is : 0
+2024-07-28 15:52:57,384 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.PublicController.displayRegisterPage(Model) method execution end
+2024-07-28 15:52:57,550 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:52:57,550 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:52:57,552 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:53:26,911 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution start
+2024-07-28 15:53:26,911 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method is : 0
+2024-07-28 15:53:26,911 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution end
+2024-07-28 15:53:26,921 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution start
+2024-07-28 15:53:26,922 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method is : 0
+2024-07-28 15:53:26,923 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.FieldsValueMatchValidator.isValid(Object,ConstraintValidatorContext) method execution end
+2024-07-28 15:53:26,925 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.PasswordStrengthValidator.isValid(String,ConstraintValidatorContext) method execution start
+2024-07-28 15:53:26,926 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute boolean com.eazybytes.demo.validations.PasswordStrengthValidator.isValid(String,ConstraintValidatorContext) method is : 0
+2024-07-28 15:53:26,926 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.validations.PasswordStrengthValidator.isValid(String,ConstraintValidatorContext) method execution end
+2024-07-28 15:53:26,926 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.PublicController.createUser(Person,Errors) method execution start
+2024-07-28 15:53:26,926 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.service.PersonService.createNewPerson(Person) method execution start
+2024-07-28 15:53:26,926 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Roles com.eazybytes.demo.repository.RolesRepository.getByRoleName(String) method execution start
+2024-07-28 15:53:27,573 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Roles com.eazybytes.demo.repository.RolesRepository.getByRoleName(String) method is : 646
+2024-07-28 15:53:27,573 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Roles com.eazybytes.demo.repository.RolesRepository.getByRoleName(String) method execution end
+2024-07-28 15:53:27,771 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:53:28,053 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution start
+2024-07-28 15:53:28,054 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method is : 1
+2024-07-28 15:53:28,054 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution end
+2024-07-28 15:53:28,925 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 1146
+2024-07-28 15:53:28,925 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:53:28,932 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute boolean com.eazybytes.demo.service.PersonService.createNewPerson(Person) method is : 2005
+2024-07-28 15:53:28,932 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.service.PersonService.createNewPerson(Person) method execution end
+2024-07-28 15:53:28,932 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute String com.eazybytes.demo.controller.PublicController.createUser(Person,Errors) method is : 2005
+2024-07-28 15:53:28,932 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.PublicController.createUser(Person,Errors) method execution end
+2024-07-28 15:53:28,950 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:53:28,950 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:53:28,953 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:53:29,258 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:53:29,259 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:53:29,259 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:53:35,278 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution start
+2024-07-28 15:53:35,278 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method is : 0
+2024-07-28 15:53:35,278 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution end
+2024-07-28 15:53:35,278 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution start
+2024-07-28 15:53:35,278 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:53:36,445 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1167
+2024-07-28 15:53:36,445 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:53:36,603 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method is : 1324
+2024-07-28 15:53:36,603 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution end
+2024-07-28 15:53:36,614 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-07-28 15:53:36,614 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:53:37,545 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 931
+2024-07-28 15:53:37,547 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:53:37,547 INFO c.e.d.c.DashboardController [http-nio-8082-exec-10] logging info message
+2024-07-28 15:53:37,547 WARN c.e.d.c.DashboardController [http-nio-8082-exec-10] logging warn message
+2024-07-28 15:53:37,547 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-10] logging error message
+2024-07-28 15:53:37,547 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-10] defaultPageSize value:10;
+2024-07-28 15:53:37,547 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-10] message:Your message is submitted successfully
+2024-07-28 15:53:37,547 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 932
+2024-07-28 15:53:37,547 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-07-28 15:53:40,642 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method execution start
+2024-07-28 15:53:40,656 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method execution start
+2024-07-28 15:53:42,752 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method is : 2095
+2024-07-28 15:53:42,753 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method execution end
+2024-07-28 15:53:42,754 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method is : 2111
+2024-07-28 15:53:42,754 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method execution end
+2024-07-28 15:53:51,898 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] ModelAndView com.eazybytes.demo.controller.AdminController.addNewCourse(Model,Courses) method execution start
+2024-07-28 15:53:51,901 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:53:52,574 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution start
+2024-07-28 15:53:52,575 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method is : 0
+2024-07-28 15:53:52,575 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution end
+2024-07-28 15:53:53,581 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 1680
+2024-07-28 15:53:53,590 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:53:53,591 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.addNewCourse(Model,Courses) method is : 1691
+2024-07-28 15:53:53,591 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] ModelAndView com.eazybytes.demo.controller.AdminController.addNewCourse(Model,Courses) method execution end
+2024-07-28 15:53:53,604 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method execution start
+2024-07-28 15:53:53,607 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method execution start
+2024-07-28 15:53:55,824 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Time took to execute List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method is : 2216
+2024-07-28 15:53:55,830 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method execution end
+2024-07-28 15:53:55,831 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method is : 2223
+2024-07-28 15:53:55,831 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method execution end
+2024-07-28 15:53:58,808 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] ModelAndView com.eazybytes.demo.controller.AdminController.viewStudents(Model,int,HttpSession,String) method execution start
+2024-07-28 15:53:58,812 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution start
+2024-07-28 15:54:00,704 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute Optional org.springframework.data.repository.CrudRepository.findById(Object) method is : 1892
+2024-07-28 15:54:00,704 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution end
+2024-07-28 15:54:00,704 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.viewStudents(Model,int,HttpSession,String) method is : 1892
+2024-07-28 15:54:00,704 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] ModelAndView com.eazybytes.demo.controller.AdminController.viewStudents(Model,int,HttpSession,String) method execution end
+2024-07-28 15:54:06,806 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.AdminController.addStudentToCourse(Model,Person,HttpSession) method execution start
+2024-07-28 15:54:06,806 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:54:07,997 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1190
+2024-07-28 15:54:07,997 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:54:07,997 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:54:09,540 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 1543
+2024-07-28 15:54:09,541 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:54:09,544 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.addStudentToCourse(Model,Person,HttpSession) method is : 2738
+2024-07-28 15:54:09,545 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.AdminController.addStudentToCourse(Model,Person,HttpSession) method execution end
+2024-07-28 15:54:09,561 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] ModelAndView com.eazybytes.demo.controller.AdminController.viewStudents(Model,int,HttpSession,String) method execution start
+2024-07-28 15:54:09,563 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution start
+2024-07-28 15:54:12,093 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Time took to execute Optional org.springframework.data.repository.CrudRepository.findById(Object) method is : 2529
+2024-07-28 15:54:12,093 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution end
+2024-07-28 15:54:12,093 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.viewStudents(Model,int,HttpSession,String) method is : 2529
+2024-07-28 15:54:12,093 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] ModelAndView com.eazybytes.demo.controller.AdminController.viewStudents(Model,int,HttpSession,String) method execution end
+2024-07-28 15:54:19,418 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] ModelAndView com.eazybytes.demo.controller.AdminController.addStudentToCourse(Model,Person,HttpSession) method execution start
+2024-07-28 15:54:19,418 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:54:20,649 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1231
+2024-07-28 15:54:20,656 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:54:20,657 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:54:22,765 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 2106
+2024-07-28 15:54:22,770 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:54:22,771 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.addStudentToCourse(Model,Person,HttpSession) method is : 3352
+2024-07-28 15:54:22,772 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] ModelAndView com.eazybytes.demo.controller.AdminController.addStudentToCourse(Model,Person,HttpSession) method execution end
+2024-07-28 15:54:22,787 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.AdminController.viewStudents(Model,int,HttpSession,String) method execution start
+2024-07-28 15:54:22,787 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution start
+2024-07-28 15:54:25,658 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute Optional org.springframework.data.repository.CrudRepository.findById(Object) method is : 2871
+2024-07-28 15:54:25,659 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution end
+2024-07-28 15:54:25,660 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.viewStudents(Model,int,HttpSession,String) method is : 2873
+2024-07-28 15:54:25,660 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.AdminController.viewStudents(Model,int,HttpSession,String) method execution end
+2024-07-28 15:54:27,933 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method execution start
+2024-07-28 15:54:27,936 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method execution start
+2024-07-28 15:54:31,129 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method is : 3190
+2024-07-28 15:54:31,129 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] List org.springframework.data.repository.ListPagingAndSortingRepository.findAll(Sort) method execution end
+2024-07-28 15:54:31,135 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method is : 3198
+2024-07-28 15:54:31,135 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] ModelAndView com.eazybytes.demo.controller.AdminController.displayCourses(Model) method execution end
+2024-07-28 15:54:33,385 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-07-28 15:54:33,387 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:54:34,807 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1418
+2024-07-28 15:54:34,813 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:54:34,814 INFO c.e.d.c.DashboardController [http-nio-8082-exec-10] logging info message
+2024-07-28 15:54:34,815 WARN c.e.d.c.DashboardController [http-nio-8082-exec-10] logging warn message
+2024-07-28 15:54:34,815 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-10] logging error message
+2024-07-28 15:54:34,815 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-10] defaultPageSize value:10;
+2024-07-28 15:54:34,815 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-10] message:Your message is submitted successfully
+2024-07-28 15:54:34,816 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 1429
+2024-07-28 15:54:34,816 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-07-28 15:54:36,258 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution start
+2024-07-28 15:54:36,258 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] List org.springframework.data.repository.ListCrudRepository.findAll() method execution start
+2024-07-28 15:54:38,578 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute List org.springframework.data.repository.ListCrudRepository.findAll() method is : 2320
+2024-07-28 15:54:38,580 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] List org.springframework.data.repository.ListCrudRepository.findAll() method execution end
+2024-07-28 15:54:38,581 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method is : 2322
+2024-07-28 15:54:38,582 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution end
+2024-07-28 15:54:44,010 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method execution start
+2024-07-28 15:54:44,013 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution start
+2024-07-28 15:54:46,003 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Optional org.springframework.data.repository.CrudRepository.findById(Object) method is : 1989
+2024-07-28 15:54:46,004 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution end
+2024-07-28 15:54:46,006 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method is : 1990
+2024-07-28 15:54:46,006 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method execution end
+2024-07-28 15:54:51,859 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] ModelAndView com.eazybytes.demo.controller.AdminController.addStudent(Model,Person,HttpSession) method execution start
+2024-07-28 15:54:51,862 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:54:53,674 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1811
+2024-07-28 15:54:53,674 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:54:53,677 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:54:54,009 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution start
+2024-07-28 15:54:54,011 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method is : 0
+2024-07-28 15:54:54,011 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution end
+2024-07-28 15:54:54,937 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 1259
+2024-07-28 15:54:54,937 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:54:54,937 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:54:56,491 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 1554
+2024-07-28 15:54:56,491 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:54:56,494 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.addStudent(Model,Person,HttpSession) method is : 4632
+2024-07-28 15:54:56,494 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] ModelAndView com.eazybytes.demo.controller.AdminController.addStudent(Model,Person,HttpSession) method execution end
+2024-07-28 15:54:56,514 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method execution start
+2024-07-28 15:54:56,516 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution start
+2024-07-28 15:54:58,213 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute Optional org.springframework.data.repository.CrudRepository.findById(Object) method is : 1697
+2024-07-28 15:54:58,213 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution end
+2024-07-28 15:54:58,222 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method is : 1706
+2024-07-28 15:54:58,223 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method execution end
+2024-07-28 15:55:05,614 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.AdminController.addStudent(Model,Person,HttpSession) method execution start
+2024-07-28 15:55:05,615 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:55:07,646 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 2029
+2024-07-28 15:55:07,647 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:55:07,647 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:55:07,979 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution start
+2024-07-28 15:55:07,980 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method is : 0
+2024-07-28 15:55:07,980 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution end
+2024-07-28 15:55:08,898 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 1250
+2024-07-28 15:55:08,898 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:55:08,909 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:55:10,284 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 1375
+2024-07-28 15:55:10,287 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:55:10,287 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.addStudent(Model,Person,HttpSession) method is : 4672
+2024-07-28 15:55:10,287 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.AdminController.addStudent(Model,Person,HttpSession) method execution end
+2024-07-28 15:55:10,305 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method execution start
+2024-07-28 15:55:10,305 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution start
+2024-07-28 15:55:11,957 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute Optional org.springframework.data.repository.CrudRepository.findById(Object) method is : 1652
+2024-07-28 15:55:11,958 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Optional org.springframework.data.repository.CrudRepository.findById(Object) method execution end
+2024-07-28 15:55:11,959 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method is : 1654
+2024-07-28 15:55:11,959 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.AdminController.displayStudents(Model,int,HttpSession,String) method execution end
+2024-07-28 15:55:14,811 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution start
+2024-07-28 15:55:14,811 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] List org.springframework.data.repository.ListCrudRepository.findAll() method execution start
+2024-07-28 15:55:16,838 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute List org.springframework.data.repository.ListCrudRepository.findAll() method is : 2027
+2024-07-28 15:55:16,839 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] List org.springframework.data.repository.ListCrudRepository.findAll() method execution end
+2024-07-28 15:55:16,839 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method is : 2028
+2024-07-28 15:55:16,840 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.AdminController.displayClasses(Model) method execution end
+2024-07-28 15:55:19,160 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-07-28 15:55:19,160 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:55:20,292 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1131
+2024-07-28 15:55:20,292 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:55:20,292 INFO c.e.d.c.DashboardController [http-nio-8082-exec-7] logging info message
+2024-07-28 15:55:20,292 WARN c.e.d.c.DashboardController [http-nio-8082-exec-7] logging warn message
+2024-07-28 15:55:20,292 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-7] logging error message
+2024-07-28 15:55:20,292 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-7] defaultPageSize value:10;
+2024-07-28 15:55:20,292 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-7] message:Your message is submitted successfully
+2024-07-28 15:55:20,292 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 1131
+2024-07-28 15:55:20,292 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-07-28 15:55:22,648 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.ProfileController.displayMessages(Model,HttpSession) method execution start
+2024-07-28 15:55:22,648 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute ModelAndView com.eazybytes.demo.controller.ProfileController.displayMessages(Model,HttpSession) method is : 0
+2024-07-28 15:55:22,648 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.ProfileController.displayMessages(Model,HttpSession) method execution end
+2024-07-28 15:55:38,234 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] String com.eazybytes.demo.controller.ProfileController.updateProfile(Profile,Errors,HttpSession) method execution start
+2024-07-28 15:55:38,236 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] Time took to execute String com.eazybytes.demo.controller.ProfileController.updateProfile(Profile,Errors,HttpSession) method is : 0
+2024-07-28 15:55:38,236 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-8] String com.eazybytes.demo.controller.ProfileController.updateProfile(Profile,Errors,HttpSession) method execution end
+2024-07-28 15:55:49,399 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.ProfileController.updateProfile(Profile,Errors,HttpSession) method execution start
+2024-07-28 15:55:49,399 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Object org.springframework.data.repository.CrudRepository.save(Object) method execution start
+2024-07-28 15:55:50,233 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution start
+2024-07-28 15:55:50,233 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method is : 0
+2024-07-28 15:55:50,249 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution end
+2024-07-28 15:55:50,583 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution start
+2024-07-28 15:55:50,585 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method is : 0
+2024-07-28 15:55:50,585 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Optional com.eazybytes.demo.audit.AuditAwareImpl.getCurrentAuditor() method execution end
+2024-07-28 15:55:51,433 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute Object org.springframework.data.repository.CrudRepository.save(Object) method is : 2033
+2024-07-28 15:55:51,434 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Object org.springframework.data.repository.CrudRepository.save(Object) method execution end
+2024-07-28 15:55:51,436 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute String com.eazybytes.demo.controller.ProfileController.updateProfile(Profile,Errors,HttpSession) method is : 2036
+2024-07-28 15:55:51,436 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] String com.eazybytes.demo.controller.ProfileController.updateProfile(Profile,Errors,HttpSession) method execution end
+2024-07-28 15:55:51,472 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] ModelAndView com.eazybytes.demo.controller.ProfileController.displayMessages(Model,HttpSession) method execution start
+2024-07-28 15:55:51,473 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute ModelAndView com.eazybytes.demo.controller.ProfileController.displayMessages(Model,HttpSession) method is : 0
+2024-07-28 15:55:51,473 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] ModelAndView com.eazybytes.demo.controller.ProfileController.displayMessages(Model,HttpSession) method execution end
+2024-07-28 15:55:58,209 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.ProfileController.displayMessages(Model,HttpSession) method execution start
+2024-07-28 15:55:58,212 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute ModelAndView com.eazybytes.demo.controller.ProfileController.displayMessages(Model,HttpSession) method is : 0
+2024-07-28 15:55:58,214 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.ProfileController.displayMessages(Model,HttpSession) method execution end
+2024-07-28 15:56:04,977 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-07-28 15:56:04,977 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:56:06,584 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1607
+2024-07-28 15:56:06,585 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:56:06,586 INFO c.e.d.c.DashboardController [http-nio-8082-exec-6] logging info message
+2024-07-28 15:56:06,587 WARN c.e.d.c.DashboardController [http-nio-8082-exec-6] logging warn message
+2024-07-28 15:56:06,588 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-6] logging error message
+2024-07-28 15:56:06,588 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-6] defaultPageSize value:10;
+2024-07-28 15:56:06,589 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-6] message:Your message is submitted successfully
+2024-07-28 15:56:06,590 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 1612
+2024-07-28 15:56:06,590 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-07-28 15:56:08,422 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution start
+2024-07-28 15:56:08,422 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution start
+2024-07-28 15:56:08,426 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution start
+2024-07-28 15:56:09,346 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method is : 920
+2024-07-28 15:56:09,346 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution end
+2024-07-28 15:56:09,347 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method is : 924
+2024-07-28 15:56:09,347 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution end
+2024-07-28 15:56:09,348 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method is : 925
+2024-07-28 15:56:09,348 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution end
+2024-07-28 15:56:13,954 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution start
+2024-07-28 15:56:13,955 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution start
+2024-07-28 15:56:13,958 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution start
+2024-07-28 15:56:14,784 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method is : 825
+2024-07-28 15:56:14,785 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution end
+2024-07-28 15:56:14,785 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method is : 829
+2024-07-28 15:56:14,786 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution end
+2024-07-28 15:56:14,787 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method is : 831
+2024-07-28 15:56:14,788 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution end
+2024-07-28 15:56:17,382 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution start
+2024-07-28 15:56:17,384 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution start
+2024-07-28 15:56:17,386 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution start
+2024-07-28 15:56:18,218 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method is : 831
+2024-07-28 15:56:18,219 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution end
+2024-07-28 15:56:18,220 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method is : 834
+2024-07-28 15:56:18,221 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution end
+2024-07-28 15:56:18,221 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method is : 837
+2024-07-28 15:56:18,221 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution end
+2024-07-28 15:56:22,152 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution start
+2024-07-28 15:56:22,153 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution start
+2024-07-28 15:56:22,155 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution start
+2024-07-28 15:56:22,973 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method is : 816
+2024-07-28 15:56:22,974 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Page com.eazybytes.demo.repository.ContactRepository.findByStatusWithQuery(String,Pageable) method execution end
+2024-07-28 15:56:22,974 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method is : 819
+2024-07-28 15:56:22,975 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Page com.eazybytes.demo.service.ContactService.findMsgsWithOpenStatus(int,String,String) method execution end
+2024-07-28 15:56:22,975 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method is : 821
+2024-07-28 15:56:22,975 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] ModelAndView com.eazybytes.demo.controller.ContactController.displayMessages(Model,int,String,String) method execution end
+2024-07-28 15:56:25,339 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method execution start
+2024-07-28 15:56:25,340 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method is : 1
+2024-07-28 15:56:25,340 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method execution end
+2024-07-28 15:56:25,348 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:56:25,349 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:56:25,350 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:56:25,561 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:56:25,561 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:56:25,561 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-1] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:56:28,340 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.HomeController.displayHomePage() method execution start
+2024-07-28 15:56:28,340 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute String com.eazybytes.demo.controller.HomeController.displayHomePage() method is : 0
+2024-07-28 15:56:28,341 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.HomeController.displayHomePage() method execution end
+2024-07-28 15:56:28,637 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:56:28,637 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:56:28,638 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:56:30,122 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:56:30,122 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:56:30,123 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-4] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:56:33,739 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.ContactController.displayContactPage(Model) method execution start
+2024-07-28 15:56:33,740 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute String com.eazybytes.demo.controller.ContactController.displayContactPage(Model) method is : 0
+2024-07-28 15:56:33,741 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.ContactController.displayContactPage(Model) method execution end
+2024-07-28 15:56:35,460 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:56:35,460 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:56:35,461 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-7] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:56:38,569 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:56:38,570 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:56:38,571 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-2] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:56:38,771 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:56:38,772 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:56:38,772 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-3] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:56:45,362 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution start
+2024-07-28 15:56:45,364 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method is : 0
+2024-07-28 15:56:45,364 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] boolean com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.supports(Class) method execution end
+2024-07-28 15:56:45,364 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution start
+2024-07-28 15:56:45,365 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:56:47,049 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1684
+2024-07-28 15:56:47,050 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:56:47,161 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method is : 1795
+2024-07-28 15:56:47,162 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Authentication com.eazybytes.demo.security.EazySchoolUsernamePwdAuthenticationProvider.authenticate(Authentication) method execution end
+2024-07-28 15:56:47,166 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution start
+2024-07-28 15:56:47,167 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution start
+2024-07-28 15:56:48,744 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method is : 1577
+2024-07-28 15:56:48,745 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Person com.eazybytes.demo.repository.PersonRepository.readByEmail(String) method execution end
+2024-07-28 15:56:48,746 INFO c.e.d.c.DashboardController [http-nio-8082-exec-6] logging info message
+2024-07-28 15:56:48,746 WARN c.e.d.c.DashboardController [http-nio-8082-exec-6] logging warn message
+2024-07-28 15:56:48,747 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-6] logging error message
+2024-07-28 15:56:48,747 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-6] defaultPageSize value:10;
+2024-07-28 15:56:48,748 ERROR c.e.d.c.DashboardController [http-nio-8082-exec-6] message:Your message is submitted successfully
+2024-07-28 15:56:48,748 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method is : 1581
+2024-07-28 15:56:48,749 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.DashboardController.displayDashboard(Model,Authentication,HttpSession) method execution end
+2024-07-28 15:56:52,378 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] ModelAndView com.eazybytes.demo.controller.StudentController.displayCourses(Model,HttpSession) method execution start
+2024-07-28 15:56:52,379 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] Time took to execute ModelAndView com.eazybytes.demo.controller.StudentController.displayCourses(Model,HttpSession) method is : 0
+2024-07-28 15:56:52,380 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-10] ModelAndView com.eazybytes.demo.controller.StudentController.displayCourses(Model,HttpSession) method execution end
+2024-07-28 15:56:58,222 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method execution start
+2024-07-28 15:56:58,223 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] Time took to execute String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method is : 0
+2024-07-28 15:56:58,224 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-6] String com.eazybytes.demo.controller.LoginController.logoutPage(HttpServletRequest,HttpServletResponse) method execution end
+2024-07-28 15:56:58,243 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:56:58,245 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 1
+2024-07-28 15:56:58,246 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-9] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:56:58,575 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution start
+2024-07-28 15:56:58,576 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] Time took to execute String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method is : 0
+2024-07-28 15:56:58,576 INFO c.e.d.a.LoggerAspect [http-nio-8082-exec-5] String com.eazybytes.demo.controller.LoginController.displayLoginPage(String,String,String,Model) method execution end
+2024-07-28 15:57:16,037 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-28 15:57:16,041 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-07-28 15:57:17,176 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
